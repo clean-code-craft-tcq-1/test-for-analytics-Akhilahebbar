@@ -30,6 +30,7 @@ List the dependencies of the Analysis-functionality.
 1. Libraries to read csv file.
 2. Libraries to convert record to pdf.
 3. Libraries to send report in mail.
+4. Libraries to perform operations on date and time.
 5. _enter dependency
 
 (add more if needed)
@@ -54,9 +55,14 @@ Write tests in the form of `<expected output or action>` from `<input>` / when `
 Add to these tests:
 
 1. Write minimum and maximum to the PDF from a csv containing positive and negative readings
-1. Write "Invalid input" to the PDF when the csv doesn't contain expected data
-1. _enter a test
-1. _enter a test
+2. Write "Invalid input" to the PDF when the csv doesn't contain expected data
+3. Write Minimum value from the csv when the input value is minimum of all the elements.
+4. Write the Maximum value from csv when the input vaule is maximum of all the elements.
+5. Write the count of breaches in csv file current month when the current month is passed as a parameter.
+6. Write "Report not found" when the report in the not stored in the server.
+7. Write "Error occured while reading data" from csvreadfunction when exception occured during operation(in the server like shutdown) 
+8. _enter a test
+9. _enter a test
 
 (add more)
 
