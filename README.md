@@ -63,11 +63,10 @@ Add to these tests:
 7. Write "Error occured while reading data" from ReadInputFromCsv when exception occured during operation(in the server like shutdown)
 8. Write "File is under other operation." from ReadInputFromCsv when the file is opened by other app/operation(Ex:updating monitored values in csv)
 9. save pdf file in specified location from WriteToPDF when fromdate and todate are passed.(one week report).
-10. Write "Date not in correct format" from the WriteToPDF when the input dates are not in correct format.
-11. Write "Report saved successfully." in WriteToPDF when report from csv is generated and saved as pdf in specified location.
-12. Write "Path not found." in WriteToPDF when given path not found.
-13. Write "Notification sent successfully." from NotifyReortAvailability funtion when the notification gone.(mail/SMS etc)
-14. Write "Error occured while notification." from NotifyReortAvailability function when exception occured in notification utility(Ex server down)
+10. Write "Report saved successfully." in WriteToPDF when report from csv is generated and saved as pdf in specified location.
+11. Write "Path not found." in WriteToPDF when given path not found.
+12. Write "Notification sent successfully." from NotifyReortAvailability funtion when the notification gone.(mail/SMS etc)
+13. Write "Error occured while notification." from NotifyReortAvailability function when exception occured in notification utility(Ex server down)
 
 
 (add more)
