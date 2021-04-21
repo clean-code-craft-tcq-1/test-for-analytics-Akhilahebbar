@@ -27,8 +27,10 @@ Notification must be sent when a new report is available.
 List the dependencies of the Analysis-functionality.
 
 1. Access to the Server containing the telemetrics in a csv file
-1. _enter dependency
-1. _enter dependency
+1. Libraries to read csv file.
+2. Libraries to convert record to pdf.
+3. Libraries to send report in mail.
+5. _enter dependency
 
 (add more if needed)
 
@@ -40,10 +42,10 @@ What is included in the software unit-test? What is not? Fill this table.
 |---------------------------|---------------|---
 Battery Data-accuracy       | No            | We do not test the accuracy of data
 Computation of maximum      | Yes           | This is part of the software being developed
-Off-the-shelf PDF converter | _enter Yes/No | _enter reasoning
-Counting the breaches       | _enter Yes/No | _enter reasoning
-Detecting trends            | _enter Yes/No | _enter reasoning
-Notification utility        | _enter Yes/No | _enter reasoning
+Off-the-shelf PDF converter | Yes           | Item is required as PDF need to be saved on weekely basis.
+Counting the breaches       | Yes           | This is the part of the software to notify the mothly breach count.
+Detecting trends            | Yes           | This is the part of the software  being developed.
+Notification utility        | Yes           | Item required to notify user by sending mail with report.
 
 ### List the Test Cases
 
