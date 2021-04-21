@@ -83,8 +83,8 @@ Enter one part that's real and another part that's faked/mocked.
 |--------------------------|--------------             |-----------------------------|---
 Read input from server     | csv file                  | internal data-structure     | Fake the server store
 Validate input             | csv data                  | valid / invalid             | None - it's a pure function
-Notify report availability | current month             | yes/No                      | Fake the report 
-Report inaccessible server | PDF file                  | Exception/reportExist       | mock the server report
-Find minimum and maximum   | csv data                  | vsv data/invalid input      | fake
-Detect trend               | csv data                  | date and time/Nothing       |fake
-Write to PDF               | max,min,breachcount,trend | PDF                         | mock
+Notify report availability | PDF file                  | PDF generated               | fake the Notifier 
+Report inaccessible server |server path                | Exception/reportExist       | fake the server 
+Find minimum and maximum   | csv data                  | csv data/invalid input      | None-pure function
+Detect trend               | csv data                  | date and time/Nothing       |  Pure function
+Write to PDF               | max,min,breachcount,trend | PDF                         | mock the pdf generation
