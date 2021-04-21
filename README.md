@@ -31,7 +31,7 @@ List the dependencies of the Analysis-functionality.
 2. Libraries to convert record to pdf.
 3. Libraries to send report in mail.
 4. Libraries to perform operations on date and time.
-5. _enter dependency
+
 
 (add more if needed)
 
@@ -68,8 +68,7 @@ Add to these tests:
 12. Write "Path not found." in WriteToPDF when given path not found.
 13. Write "Notification sent successfully." from NotifyReortAvailability funtion when the notification gone.(mail/SMS etc)
 14. Write "Error occured while notification." from NotifyReortAvailability function when exception occured in notification utility(Ex server down)
-15. _enter a test
-16. _enter a test
+
 
 (add more)
 
