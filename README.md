@@ -56,13 +56,20 @@ Add to these tests:
 
 1. Write minimum and maximum to the PDF from a csv containing positive and negative readings
 2. Write "Invalid input" to the PDF when the csv doesn't contain expected data
-3. Write Minimum value from the csv when the input value is minimum of all the elements.
-4. Write the Maximum value from csv when the input vaule is maximum of all the elements.
-5. Write the count of breaches in csv file current month when the current month is passed as a parameter.
-6. Write "Report not found" when the report in the not stored in the server.
-7. Write "Error occured while reading data" from csvreadfunction when exception occured during operation(in the server like shutdown) 
-8. _enter a test
-9. _enter a test
+3. Write the count of breaches from breachcountformonth function  when the current month is passed as a parameter.
+4. Write date and time of the record from recordtrendfunction when reading increases continuosly in specified interval of time(30 min)
+5. Sould not write anything from recordtrendfunction when readings are fluctuating in specified interval of time.
+6. Write "Report not found" from ReadInputFromCsv when the report in the not stored in the server.
+7. Write "Error occured while reading data" from ReadInputFromCsv when exception occured during operation(in the server like shutdown)
+8. Write "File is under other operation." from ReadInputFromCsv when the file is opened by other app/operation(Ex:updating monitored values in csv)
+9. save pdf file in specified location from WriteToPDF when fromdate and todate are passed.(one week report).
+10. Write "Date not in correct format" from the WriteToPDF when the input dates are not in correct format.
+11. Write "Report saved successfully." in WriteToPDF when report from csv is generated and saved as pdf in specified location.
+12. Write "Path not found." in WriteToPDF when given path not found.
+13. Write "Notification sent successfully." from NotifyReortAvailability funtion when the notification gone.(mail/SMS etc)
+14. Write "Error occured while notification." from NotifyReortAvailability function when exception occured in notification utility(Ex server down)
+15. _enter a test
+16. _enter a test
 
 (add more)
 
@@ -72,12 +79,13 @@ Consider the tests for each functionality below.
 In those tests, identify inputs and outputs.
 Enter one part that's real and another part that's faked/mocked.
 
-| Functionality            | Input        | Output                      | Faked/mocked part
-|--------------------------|--------------|-----------------------------|---
-Read input from server     | csv file     | internal data-structure     | Fake the server store
-Validate input             | csv data     | valid / invalid             | None - it's a pure function
-Notify report availability | _enter input | _enter output               | _enter fake or mock
-Report inaccessible server | _enter input | _enter output               | _enter fake or mock
-Find minimum and maximum   | _enter input | _enter output               | _enter fake or mock
-Detect trend               | _enter input | _enter output               | _enter fake or mock
-Write to PDF               | _enter input | _enter output               | _enter fake or mock
+
+| Functionality            | Input                     | Output                      | Faked/mocked part
+|--------------------------|--------------             |-----------------------------|---
+Read input from server     | csv file                  | internal data-structure     | Fake the server store
+Validate input             | csv data                  | valid / invalid             | None - it's a pure function
+Notify report availability | current month             | yes/No                      | Fake the report 
+Report inaccessible server | PDF file                  | Exception/reportExist       | mock the server report
+Find minimum and maximum   | csv data                  | vsv data/invalid input      | fake
+Detect trend               | csv data                  | date and time/Nothing       |fake
+Write to PDF               | max,min,breachcount,trend | PDF                         | mock
