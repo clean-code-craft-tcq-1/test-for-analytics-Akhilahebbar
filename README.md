@@ -56,7 +56,7 @@ Add to these tests:
 
 1. Write minimum and maximum to the PDF from a csv containing positive and negative readings
 2. Write "Invalid input" to the PDF when the csv doesn't contain expected data
-3. Write the count of breaches from breachcountformonth function  when the current month is passed as a parameter.
+3. Write the count of breaches from breachcountformonth function  .(If no breach return 0)
 4. Write date and time of the record from recordtrendfunction when reading increases continuosly in specified interval of time(30 min)
 5. Sould not write anything from recordtrendfunction when readings are fluctuating in specified interval of time.
 6. Write "Report not found" from ReadInputFromCsv when the report in the not stored in the server.
