@@ -2,7 +2,6 @@
 
 Design tests for Analytics functionality on a Battery Monitoring System.
 
-Fill the parts marked '' in the **Tasks** section below.
 
 ## Analysis-functionality to be tested
 
@@ -29,11 +28,9 @@ List the dependencies of the Analysis-functionality.
 1. Access to the Server containing the telemetrics in a csv file
 1. Libraries to read csv file.
 2. Libraries to convert record to pdf.
-3. Libraries to send report in mail.
+3. Libraries to send report (mail,SMs etc).
 4. Libraries to perform operations on date and time.
 
-
-(add more if needed)
 
 ### Mark the System Boundary
 
@@ -56,17 +53,16 @@ Add to these tests:
 
 1. Write minimum and maximum to the PDF from a csv containing positive and negative readings
 2. Write "Invalid input" to the PDF when the csv doesn't contain expected data
-3. Write the count of breaches from breachcountformonth function  .(If no breach return 0)
-4. Write date and time of the record from recordtrendfunction when reading increases continuosly in specified interval of time(30 min)
-5. Sould not write anything from recordtrendfunction when readings are fluctuating in specified interval of time.
+3. Write the count of breaches from BreachCountForMonth Function  .(If no breach then return 0)
+4. Write date and time of the record from RecordTrend Function when reading increases continuosly in specified interval of time(30 min)
+5. Write "No record found" from  RecordTrend Function when readings are fluctuating in specified interval of time.
 6. Write "Report not found" from ReadInputFromCsv when the report in the not stored in the server.
 7. Write "Error occured while reading data" from ReadInputFromCsv when exception occured during operation(in the server like shutdown)
 8. Write "File is under other operation." from ReadInputFromCsv when the file is opened by other app/operation(Ex:updating monitored values in csv)
-9. save pdf file in specified location from WriteToPDF when fromdate and todate are passed.(one week report).
-10. Write "Report saved successfully." in WriteToPDF when report from csv is generated and saved as pdf in specified location.
-11. Write "Path not found." in WriteToPDF when given path not found.
-12. Write "Notification sent successfully." from NotifyReortAvailability funtion when the notification gone.(mail/SMS etc)
-13. Write "Error occured while notification." from NotifyReortAvailability function when exception occured in notification utility(Ex server down)
+9. Write "Report saved successfully." in WriteToPDF when report from csv is generated and saved as pdf in specified location.
+10. Write "Path not found." in WriteToPDF when given path not found.
+11. Write "Notification sent successfully." from NotifyReortAvailability funtion when the notification gone.(mail/SMS etc)
+12. Write "Error occured while notifying." from NotifyReortAvailability function when exception occured in notification utility(Ex server down)
 
 
 (add more)
